@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { projects } from '@/data/projects'
 
-const baseUrl = 'https://bendev.com'
+const baseUrl = 'https://bendev.site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/about', '/skills', '/projects', '/contact', '/mentions-legales']

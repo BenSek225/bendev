@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import './globals.css'
@@ -10,7 +11,7 @@ import { SiteAtmosphere } from '@/components/portfolio/site-atmosphere'
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-serif', style: ['normal', 'italic'] })
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
-const siteUrl = 'https://bendev.com'
+const siteUrl = 'https://bendev.site'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -249,6 +250,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </SmoothScrollProvider>
         <CustomCursor />
         <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   )

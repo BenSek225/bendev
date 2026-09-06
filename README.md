@@ -8,7 +8,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Security](https://img.shields.io/badge/Security-A+-success)](https://github.com/BenSek225/bendev/blob/main/SECURITY.md)
 
-**🌍 Live:** [bendev.com](https://bendev.com)  
+**🌍 Live:** [bendev.site](https://bendev.site)  
 **📧 Contact:** [sekongobienvenu22@gmail.com](mailto:sekongobienvenu22@gmail.com)  
 **🔗 LinkedIn:** [Bienvenu Y. Sekongo](https://linkedin.com/in/sek-y-ben)
 
@@ -218,7 +218,7 @@ keywords: [
   "@type": "Person",
   "name": "Y. Bienvenu Sekongo",
   "jobTitle": "Développeur logiciel fullstack",
-  "url": "https://bendev.com",
+  "url": "https://bendev.site",
   "knowsAbout": ["React", "Next.js", "React Native", "TypeScript"],
   "address": {
     "addressLocality": "Abidjan",
@@ -351,13 +351,13 @@ vercel login
 vercel --prod
 
 # 4. Configurer le domaine
-# Dashboard Vercel > Settings > Domains > Add bendev.com
+# Dashboard Vercel > Settings > Domains > Add bendev.site
 ```
 
 ### ⚙️ **Variables d'Environnement Vercel**
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://bendev.com
+NEXT_PUBLIC_SITE_URL=https://bendev.site
 NEXT_PUBLIC_SITE_NAME=BenDev
 NEXT_PUBLIC_AUTHOR_NAME=Y. Bienvenu Sekongo
 NEXT_PUBLIC_AUTHOR_EMAIL=sekongobienvenu22@gmail.com
@@ -366,9 +366,9 @@ NEXT_PUBLIC_AUTHOR_EMAIL=sekongobienvenu22@gmail.com
 ### 🔧 **Configuration DNS**
 
 ```dns
-# Enregistrements DNS pour bendev.com
+# Enregistrements DNS pour bendev.site
 A     @     76.76.19.61       # Vercel IP
-CNAME www   bendev.com.       # WWW redirect
+CNAME www   bendev.site.       # WWW redirect
 TXT   @     "v=spf1 include:_spf.vercel.com ~all"  # SPF
 ```
 
@@ -469,7 +469,7 @@ npm run build        # Build success
 ### 👨‍💻 **Développeur**
 
 **Y. Bienvenu Sekongo**  
-🌍 **Portfolio:** [bendev.com](https://bendev.com)  
+🌍 **Portfolio:** [bendev.site](https://bendev.site)  
 📧 **Email:** [sekongobienvenu22@gmail.com](mailto:sekongobienvenu22@gmail.com)  
 🔗 **LinkedIn:** [sek-y-ben](https://linkedin.com/in/sek-y-ben)  
 🐙 **GitHub:** [@BenSek225](https://github.com/BenSek225)  
