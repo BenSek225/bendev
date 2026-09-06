@@ -53,7 +53,7 @@ export default function Page() {
             variants={staggerContainer} 
             initial="hidden" 
             animate="visible" 
-            className="relative flex flex-col gap-7 py-[89px] pl-6 md:pl-12 lg:py-24"
+            className="relative flex flex-col gap-6 py-20 pl-6 md:gap-7 md:py-[89px] md:pl-12 lg:py-24"
           >
             <div className="availability-rail absolute left-0 top-1/2 hidden -translate-y-1/2 md:flex">
               <span className="availability-dot" />
@@ -130,7 +130,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="a-propos" className="section-spacing bg-primary">
+      <section id="a-propos" className="section-spacing-sm bg-primary">
         <div className="container-portfolio">
           <SectionLabel index="01">À propos</SectionLabel>
           
@@ -139,7 +139,7 @@ export default function Page() {
             initial="hidden" 
             whileInView="visible" 
             viewport={{ once: true, margin: '-100px' }} 
-            className="mt-12 grid gap-12 lg:grid-cols-[0.85fr_1.3fr_1fr] lg:gap-14"
+            className="mt-10 grid gap-10 lg:grid-cols-[0.85fr_1.3fr_1fr] lg:gap-14"
           >
             <motion.div variants={staggerItem}>
               <Image 
@@ -185,7 +185,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="projets" className="projects-section relative overflow-hidden section-spacing">
+      <section id="projets" className="projects-section relative overflow-hidden section-spacing-sm">
         <FloatingOrb size={260} top="8%" left="72%" color="rgba(230,87,42,.22)" duration={20} />
         <FloatingOrb size={220} top="62%" left="8%" color="rgba(10,10,10,.28)" duration={24} />
         
@@ -210,7 +210,7 @@ export default function Page() {
             initial="hidden" 
             whileInView="visible" 
             viewport={{ once: true, margin: '-100px' }} 
-            className="mt-12 grid gap-10 md:grid-cols-3"
+            className="mt-10 grid gap-8 md:grid-cols-3"
           >
             {projects.map(project => (
               <motion.article variants={staggerItem} key={project.title} className="group">
@@ -249,7 +249,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="contact" className="contact-section relative overflow-hidden section-spacing">
+      <section id="contact" className="contact-section relative overflow-hidden section-spacing-sm">
         <Image 
           src="/portfolio/contact.png" 
           alt="Couloir architectural éclairé par une lumière orange" 

@@ -27,15 +27,15 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-primary text-foreground">
-      <header className="container-portfolio flex min-h-[70vh] flex-col justify-end gap-8 py-28 md:min-h-[76vh] md:py-36">
+      <header className="container-portfolio flex min-h-[65vh] flex-col justify-end gap-6 py-24 md:min-h-[70vh] md:gap-8 md:py-32">
         <motion.div initial="hidden" animate="visible" variants={fadeUp}>
           <SectionLabel index="01">CONTACT</SectionLabel>
-          <h1 className="mt-8 max-w-4xl font-serif text-hero-sm leading-[1.05] text-balance md:text-hero-md lg:text-hero">Un projet en tête<span className="text-accent"> ?</span></h1>
-          <p className="mt-8 max-w-xl text-body-lg leading-relaxed text-secondary">Vous avez un projet en tête ? N&apos;hésitez pas à me contacter. Je serais ravi de discuter de vos idées et de voir comment nous pouvons collaborer.</p>
+          <h1 className="mt-6 max-w-4xl font-serif text-hero-sm leading-[1.05] text-balance md:mt-8 md:text-hero-md lg:text-hero">Un projet en tête<span className="text-accent"> ?</span></h1>
+          <p className="mt-6 max-w-xl text-body-lg leading-relaxed text-secondary md:mt-8">Vous avez un projet en tête ? N&apos;hésitez pas à me contacter. Je serais ravi de discuter de vos idées et de voir comment nous pouvons collaborer.</p>
         </motion.div>
       </header>
 
-      <section className="border-y border-white/10 bg-surface py-16 md:py-24">
+      <section className="border-y border-white/10 bg-surface py-12 md:py-16">
         <div className="container-portfolio">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={staggerContainer} className="grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2">
             {contacts.map(({ icon: Icon, label, value, href }) => (
@@ -53,14 +53,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-accent via-accent to-accent-hover py-20 text-foreground md:py-28">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-accent via-accent to-accent-hover py-16 text-foreground md:py-20">
         <div className="container-portfolio flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div><h2 className="max-w-2xl font-serif text-display-sm leading-[0.98] text-balance text-foreground md:text-display">Contactez-moi sur WhatsApp</h2><p className="mt-5 max-w-md text-body-lg text-foreground/80">La façon la plus rapide de me contacter est via WhatsApp.</p></div>
           <div className="flex flex-col items-start gap-5"><Link href="https://wa.me/2250710504007" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-primary px-5 py-4 font-mono text-nav uppercase text-accent transition-transform hover:-translate-y-1"><MessageCircle aria-hidden="true" size={18} />DISCUTER SUR WHATSAPP <ArrowUpRight aria-hidden="true" size={18} /></Link><p className="text-label text-primary/65">Ou envoyez-moi un message directement au +225 07 10 50 40 07</p></div>
         </div>
       </section>
 
-      <section className="container-portfolio py-20 md:py-28"><SectionLabel index="02">QUESTIONS FRÉQUENTES</SectionLabel><div className="mt-10 border-t border-white/10">{faqs.map(([question, answer], index) => { const isOpen = open === index; return <div key={question} className="border-b border-white/10"><button type="button" onClick={() => setOpen(isOpen ? null : index)} aria-expanded={isOpen} className="flex w-full items-center justify-between gap-6 py-6 text-left"><span className="font-serif text-heading-sm">{question}</span><Plus aria-hidden="true" className={`shrink-0 text-accent transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`} size={22} /></button><AnimatePresence initial={false}>{isOpen && <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }} className="overflow-hidden"><p className="max-w-2xl pb-6 text-body-lg leading-relaxed text-secondary">{answer}</p></motion.div>}</AnimatePresence></div> })}</div></section>
+      <section className="container-portfolio py-16 md:py-20"><SectionLabel index="02">QUESTIONS FRÉQUENTES</SectionLabel><div className="mt-10 border-t border-white/10">{faqs.map(([question, answer], index) => { const isOpen = open === index; return <div key={question} className="border-b border-white/10"><button type="button" onClick={() => setOpen(isOpen ? null : index)} aria-expanded={isOpen} className="flex w-full items-center justify-between gap-6 py-6 text-left"><span className="font-serif text-heading-sm">{question}</span><Plus aria-hidden="true" className={`shrink-0 text-accent transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`} size={22} /></button><AnimatePresence initial={false}>{isOpen && <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }} className="overflow-hidden"><p className="max-w-2xl pb-6 text-body-lg leading-relaxed text-secondary">{answer}</p></motion.div>}</AnimatePresence></div> })}</div></section>
 
       <section className="border-t border-white/10 bg-surface py-16 md:py-20"><div className="container-portfolio flex flex-col gap-4 md:flex-row md:items-start md:justify-between"><div className="flex items-center gap-3 font-mono text-label uppercase text-accent"><MapPin aria-hidden="true" size={18} />Abidjan, Côte d&apos;Ivoire</div><p className="max-w-xl text-body-lg text-secondary">Basé à Abidjan, je travaille avec des clients du monde entier. Je suis ouvert aux collaborations à distance et aux projets internationaux.</p></div></section>
       <Footer />

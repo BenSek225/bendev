@@ -35,15 +35,15 @@ export default function SkillsPage() {
 
   return (
     <main className="bg-primary text-text-primary">
-      <section className="container-portfolio section-spacing">
+      <section className="container-portfolio pb-16 pt-32 md:pb-20 md:pt-40">
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
           <motion.div variants={staggerItem}><SectionLabel index="01">COMPÉTENCES</SectionLabel></motion.div>
-          <motion.h1 variants={staggerItem} className="mt-8 max-w-4xl font-serif text-h2 text-balance md:text-[64px] md:leading-[1.05]">Une expertise <em className="text-accent">technique solide</em>, une vision créative.</motion.h1>
-          <motion.p variants={staggerItem} className="mt-8 max-w-2xl text-body-lg leading-relaxed text-secondary">Une expertise fullstack combinée à une vision créative pour créer des solutions digitales innovantes, performantes et scalables.</motion.p>
+          <motion.h1 variants={staggerItem} className="mt-6 max-w-4xl font-serif text-h2 text-balance md:mt-8 md:text-[64px] md:leading-[1.05]">Une expertise <em className="text-accent">technique solide</em>, une vision créative.</motion.h1>
+          <motion.p variants={staggerItem} className="mt-6 max-w-2xl text-body-lg leading-relaxed text-secondary md:mt-8">Une expertise fullstack combinée à une vision créative pour créer des solutions digitales innovantes, performantes et scalables.</motion.p>
         </motion.div>
       </section>
 
-      <section className="container-portfolio pb-24 md:pb-32">
+      <section className="container-portfolio pb-16 md:pb-20">
         <div className="flex flex-wrap gap-3 border-b border-white/10 pb-8">
           {tabs.map((tab) => <button key={tab} type="button" onClick={() => setActiveTab(tab)} className={`cursor-hover-target rounded-full border px-6 py-2 font-mono text-nav uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent ${activeTab === tab ? 'border-accent bg-accent text-text-primary hover:bg-accent-hover hover:text-text-primary' : 'border-white/15 text-secondary hover:text-accent'}`}>{tab}</button>)}
         </div>
@@ -60,9 +60,9 @@ export default function SkillsPage() {
         <div className="container-portfolio section-spacing"><SectionLabel index="02">CERTIFICATIONS</SectionLabel><motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={staggerContainer} className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{certifications.map(([title, issuer, year]) => <motion.article key={title} variants={staggerItem} className="border-t-2 border-accent bg-primary p-6"><h2 className="font-serif text-xl leading-tight">{title}</h2><div className="mt-8 flex justify-between gap-4 font-mono text-label uppercase text-secondary"><span>{issuer}</span><span>{year}</span></div></motion.article>)}</motion.div></div>
       </section>
 
-      <section className="container-portfolio border-b border-white/10 py-20 md:py-28"><motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid md:grid-cols-3">{[[15, 'Projets réalisés'], [8, 'Clients satisfaits'], [3, "Années d'expérience"]].map(([target, label], index) => <motion.div key={label} variants={staggerItem} className={`py-5 md:px-10 ${index > 0 ? 'border-t border-white/10 md:border-l md:border-t-0' : ''}`}><StatCounter target={target as number} suffix="+" label={label as string} /></motion.div>)}</motion.div></section>
+      <section className="container-portfolio border-b border-white/10 py-16 md:py-20"><motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid md:grid-cols-3">{[[15, 'Projets réalisés'], [8, 'Clients satisfaits'], [3, "Années d'expérience"]].map(([target, label], index) => <motion.div key={label} variants={staggerItem} className={`py-5 md:px-10 ${index > 0 ? 'border-t border-white/10 md:border-l md:border-t-0' : ''}`}><StatCounter target={target as number} suffix="+" label={label as string} /></motion.div>)}</motion.div></section>
 
-      <section className="projects-section px-5 py-24 md:py-36"><motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={fadeUp} className="container-portfolio"><h2 className="max-w-3xl font-serif text-h2 text-text-primary md:text-[64px]">Travaillons ensemble !</h2><p className="mt-6 max-w-xl text-lg leading-relaxed text-text-primary">Mes compétences sont à votre service pour donner vie à vos projets les plus ambitieux.</p><div className="mt-10 flex flex-wrap items-center gap-5"><CTAButton label="DÉMARRER UN PROJET" href="/contact" /><CTAButton label="VOIR MES RÉALISATIONS" href="/projects" variant="outline" /></div></motion.div></section>
+      <section className="projects-section px-5 py-16 md:py-24"><motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={fadeUp} className="container-portfolio"><h2 className="max-w-3xl font-serif text-h2 text-text-primary md:text-[64px]">Travaillons ensemble !</h2><p className="mt-6 max-w-xl text-lg leading-relaxed text-text-primary">Mes compétences sont à votre service pour donner vie à vos projets les plus ambitieux.</p><div className="mt-10 flex flex-wrap items-center gap-5"><CTAButton label="DÉMARRER UN PROJET" href="/contact" /><CTAButton label="VOIR MES RÉALISATIONS" href="/projects" variant="outline" /></div></motion.div></section>
       <Footer />
     </main>
   )
