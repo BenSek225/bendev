@@ -5,7 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "audit": "npm audit",
+    "audit-fix": "npm audit fix",
+    "security-check": "npm audit --audit-level high && npm run type-check",
+    "build-analyze": "ANALYZE=true npm run build",
+    "prebuild": "npm run security-check"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

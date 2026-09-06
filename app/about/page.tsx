@@ -62,7 +62,7 @@ const interests = [
 ] as const
 
 // Images disponibles pour les centres d'intérêt
-const bgImages = ['1.png', '2.jpg', '3.jpg', '4.png', '5.jpg', '6.jpg', '6.png', '7.png', '8.png', '9.jpg', '10.jpg', '11.png', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg']
+const bgImages = ['1.png', '2.jpg', '3.jpg', '4.png', '5.jpg', '6.jpg', '6.png', '7.png', '8.png', '9.jpg', '10.jpg', '11.png', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '18.jpg']
 
 // Composant pour une carte d'intérêt avec image aléatoire rotative
 function InterestCard({ icon: Icon, title, description, index }: { icon: any; title: string; description: string; index: number }) {
