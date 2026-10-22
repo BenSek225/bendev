@@ -73,7 +73,7 @@ export const projects: Record<string, Project> = {
     details: {
       duration: '3 mois (design, développement, production)',
       client: 'Les Ateliers Arlett - Maison de mode ivoirienne',
-      siteUrl: 'https://www.lamaisonarlett.com',
+      siteUrl: 'lamaisonarlett.com',
     },
     technologies: [
       'Next.js 16.2.0 (App Router)',
@@ -158,7 +158,7 @@ export const projects: Record<string, Project> = {
     details: {
       duration: '3 mois (en cours, production active)',
       client: 'Ayi Premium (cofondateur)',
-      siteUrl: 'https://www.ayipremium.com',
+      siteUrl: 'ayipremium.com',
     },
     technologies: [
       'Next.js 16.2.4 (App Router + Turbopack)',
